@@ -1090,7 +1090,8 @@ class FixtureDef(Generic[FixtureValue]):
             result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
         finally:
             # schedule our finalizer, even if the setup failed
-            request.node.addfinalizer(finalizer)
+            pass
+            #request.node.addfinalizer(finalizer)
 
         return result
 
